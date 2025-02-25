@@ -23,37 +23,57 @@
         </form>
 
         <h1>Formulário de login</h1>
-        <input type="text" name="Nome" id="nome" placeholder="Nome">
-        <input type="text" name="Sobrenome" id="sobrenome" placeholder="Sobrenome">
+
+        <form action="index.html" method="get" enctype="multipart/form-data">
+        <input type="text" name="Nome" id="nome" placeholder="Nome" required>
+        <input type="text" name="Sobrenome" id="sobrenome" required placeholder="Sobrenome">
         <br>
         <br>
-        <input type="text" name="Celular ou E-mail" id="celular-email" placeholder="Celular ou Email">
+        <input type="text" name="Celular ou E-mail" id="celular-email" required placeholder="Celular ou Email">
         <br>
         <br>
-        <input type="password" name="Senha" id="senha" placeholder="Digite uma senha">
-        <input type="password" name="Confirmacao Senha" id="connfirmacao-senha" placeholder="Digite novamente a senha">
+        <input type="password" name="Senha" id="senha" required placeholder="Digite uma senha">
+        <input type="password" name="Confirmacao Senha" id="confirmacao-senha" required placeholder="Digite novamente a senha">
 
         <h4> Data de Nascimento</h4>
         <label for="dia">Dia</label>
-        <select name="Dia" id="dia"></select>
+        <select name="Dia" id="dia" required></select>
         <label for="mes">Mês</label>
-        <select name="Mês" id="mes"></select>
+        <select name="Mês" id="mes" required>
+            <option value="Janeiro">Janeiro</option>
+            <option value="Fevereiro">Fevereiro</option>
+            <option value="Março">Março</option>
+            <option value="Abril">Abril</option>
+            <option value="Maio">Maio</option>
+            <option value="Junho">Junho</option>
+            <option value="Julho">Julho</option>
+            <option value="Agosto">Agosto</option>
+            <option value="Setembro">Setembro</option>
+            <option value="Outubro">Outubro</option>
+            <option value="Novembro">Novembro</option>
+            <option value="Dezembro">Dezembro</option>
+        </select>
         <label for="ano">Ano</label>
-        <select name="Ano" id="ano">
+        <select name="Ano" id="ano" required>
             <option value=""></option>
         </select>
 
         <h4>Gênero:</h4>
 
         <label for="feminino">Feminino</label>
-        <input type="radio" name="genero" id="feminino">
+        <input type="radio" name="genero" id="feminino" value="feminino" checked>
         <label for="masculino">Masculino</label>
-        <input type="radio" name="genero" id="masculino">
+        <input type="radio" name="genero" id="masculino" value="masculino">
         <label for="masculino">Outro</label>
-        <input type="radio" name="genero" id="outro">
+        <input type="radio" name="genero" id="outro" value="outro">
+        <br>
+        <br>
+        <input type="file" name="Foto do Perfil" id="foto-perfil" required value="Foto do perfil">
+        
         <br>
         <br>
         <input type="submit" value="Enviar Fomulário">
+        </form>
 
 </body>
 
