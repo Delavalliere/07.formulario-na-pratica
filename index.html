@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+
+<body>
+
+    <h1>Formulário com Get</h1>
+    <form action="index.html" method="get">
+        <input type="text" name="q" placeholder="Insira uma pesquisa">
+        <input type="submit" value="Enviar">
+        Faz o envio direto na url, o termo de pesquisa aparece já na url
+
+        <h1>Formulário com Post</h1>
+        <form action="index.html" method="post">
+            <input type="text" name="q" placeholder="Insira uma pesquisa">
+            <input type="submit" value="Enviar">
+            Faz o envio de forma mais reservada, o termo pesquisado/inserido, não aparece na url
+        </form>
+
+        <h1>Formulário de login</h1>
+        <input type="text" name="Nome" id="nome" placeholder="Nome">
+        <input type="text" name="Sobrenome" id="sobrenome" placeholder="Sobrenome">
+        <br>
+        <br>
+        <input type="text" name="Celular ou E-mail" id="celular-email" placeholder="Celular ou Email">
+        <br>
+        <br>
+        <input type="password" name="Senha" id="senha" placeholder="Digite uma senha">
+        <input type="password" name="Confirmacao Senha" id="connfirmacao-senha" placeholder="Digite novamente a senha">
+
+        <h4> Data de Nascimento</h4>
+        <label for="dia">Dia</label>
+        <select name="Dia" id="dia"></select>
+        <label for="mes">Mês</label>
+        <select name="Mês" id="mes"></select>
+        <label for="ano">Ano</label>
+        <select name="Ano" id="ano">
+            <option value=""></option>
+        </select>
+
+        <h4>Gênero:</h4>
+
+        <label for="feminino">Feminino</label>
+        <input type="radio" name="genero" id="feminino">
+        <label for="masculino">Masculino</label>
+        <input type="radio" name="genero" id="masculino">
+        <label for="masculino">Outro</label>
+        <input type="radio" name="genero" id="outro">
+        <br>
+        <br>
+        <input type="submit" value="Enviar Fomulário">
+
+</body>
+
+</html>
+
+<!-- Usei o Chat gpt para fazer esse código, pois ainda não sei java script e não queria ter que digitar termo por termo :P -->
+<script>
+    // Acessa o elemento select para o dia
+    const selectDia = document.getElementById('dia');
+
+    // Loop para adicionar 31 opções para os dias
+    for (let i = 1; i <= 31; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        selectDia.appendChild(option);
+    }
+</script>
+
+<script>
+    // Acessa o elemento select para o ano
+    const selectAno = document.getElementById('ano');
+
+    // Loop para adicionar opções de ano de 1925 até 2025
+    for (let i = 1925; i <= 2025; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        selectAno.appendChild(option);
+    }
+</script>
